@@ -7,9 +7,9 @@ Given(/^I have the number (\d+)$/) do |number|
 end
 
 When(/^I add them together$/) do
-  @calculator.add
+  @result = @calculator.add
 end
 
-Then(/^I should see (\d+) on the terminal$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see (\d+) on the terminal$/) do |number|
+  assert_equal 12, @result
 end

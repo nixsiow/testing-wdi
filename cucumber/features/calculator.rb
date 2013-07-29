@@ -4,7 +4,7 @@ class Calculator
   end
 
   def <<(number)
-    @input.push(number)
+    @input.push(number.to_i)
   end
 
   def add
