@@ -10,5 +10,5 @@ Feature: User sign up and registration
   Scenario: A user logs in with valid information
     Given I am on the login page
     And I have already registered as "bob@gmail.com"
-    When I login with correct information
+    When I login with correct email "bob@gmail.com"
     Then I should see "Welcome back"
