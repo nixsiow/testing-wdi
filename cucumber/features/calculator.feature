@@ -16,3 +16,10 @@ Feature: Calculator
     And I have the number 7
     When I multiply them together
     Then I should see 21 on the terminal
+
+  Scenario: Subtract two numbers
+    Given I have a calculator
+    And I have the number 10
+    And I have the number 7
+    When I subtract them
+    Then I should see 3 on the terminal

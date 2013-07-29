@@ -10,6 +10,10 @@ When(/^I add them together$/) do
   @result = @calculator.add
 end
 
+When(/^I subtract them$/) do
+  @result = @calculator.subtract
+end
+
 When(/^I multiply them together$/) do
   @result = @calculator.multiply
 end
