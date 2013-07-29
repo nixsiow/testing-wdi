@@ -12,4 +12,10 @@ class Calculator
     puts result
     result
   end
+
+  def multiply
+    result = @input[0] * @input[1]
+    puts result
+    result
+  end
 end

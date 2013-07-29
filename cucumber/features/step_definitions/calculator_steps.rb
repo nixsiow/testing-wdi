@@ -10,6 +10,10 @@ When(/^I add them together$/) do
   @result = @calculator.add
 end
 
+When(/^I multiply them together$/) do
+  @result = @calculator.multiply
+end
+
 Then(/^I should see (\d+) on the terminal$/) do |number|
-  assert_equal 12, @result
+  assert_equal number.to_i, @result
 end
