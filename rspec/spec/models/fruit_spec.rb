@@ -16,6 +16,16 @@ describe Fruit do
 
   it { should belong_to :stair }
 
+  it "should be quite delicious" do
+    fruit = Fruit.new(:name => 'cranberry')
+    fruit.deliciousness.should == 0.9
+  end
+
+  it "should loosen your poopen" do
+    fruit = Fruit.new(:name => 'prune')
+    fruit.dietary_fibre.should == 0.7
+  end
+
   describe "An apple" do
     before do
       @apple = Apple.create(:name => 'Apple')

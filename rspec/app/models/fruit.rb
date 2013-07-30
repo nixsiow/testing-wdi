@@ -18,4 +18,12 @@ class Fruit < ActiveRecord::Base
   def squishy?
     true
   end
+
+  def dietary_fibre
+    0.7
+  end
+
+  def deliciousness
+    0.4
+  end
 end

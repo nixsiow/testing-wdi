@@ -11,6 +11,7 @@ gem 'sqlite3'
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'simplecov'
 end
 
 # Gems used only for assets and not required
