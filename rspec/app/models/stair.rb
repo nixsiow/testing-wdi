@@ -1,14 +1,12 @@
 # == Schema Information
 #
-# Table name: fruits
+# Table name: stairs
 #
 #  id         :integer          not null, primary key
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  name       :string(255)
-#  type       :string(255)
-#  stair_id   :integer
 #
 
-class Pear < Fruit
+class Stair < ActiveRecord::Base
+  has_many :fruits
 end

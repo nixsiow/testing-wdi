@@ -6,11 +6,15 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  name       :string(255)
+#  type       :string(255)
+#  stair_id   :integer
 #
 
 require 'spec_helper'
 
 describe Fruit do
+
+  it { should belong_to :stair }
 
   describe "An apple" do
     before do
