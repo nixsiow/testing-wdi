@@ -209,7 +209,7 @@
       "/Users/inceptor/Projects/wdi/testing-wdi/rspec/app/controllers/fruits_controller.rb": [
         1,
         1,
-        3,
+        4,
         null,
         null
       ],
@@ -426,6 +426,6 @@
         null
       ]
     },
-    "timestamp": 1375238950
+    "timestamp": 1375239586
   }
 }
