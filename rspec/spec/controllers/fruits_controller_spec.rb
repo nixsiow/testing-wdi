@@ -54,6 +54,16 @@ describe FruitsController do
     end
   end
 
+  describe 'GET to show' do
+    before do
+      @fruit = Fruit.create(:name => 'Pineapple')
+    end
+    it "should render the show template" do
+      get :show, {:id => @fruit.id}
+      expect(response).to render_template("show")
+    end
+  end
+
   describe 'POST to create' do
     describe 'a fruit with valid information' do
       before do
@@ -65,8 +75,9 @@ describe FruitsController do
         expect(response).to(redirect_to(fruits_path(assigns(:fruit))))
       end
 
-      it "should render the show template" do
-      end
+      # it "should render the show template" do
+      #   expect(response).to render_template("show")
+      # end
 
       it "should increase the number of Fruits" do
       end

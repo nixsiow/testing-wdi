@@ -8,6 +8,10 @@ class FruitsController < ApplicationController
     end
   end
 
+  def show
+    @fruit = Fruit.find(params[:id])
+  end
+
   def create
     @fruit = Fruit.create(:name => params[:name])
     if (@fruit)
