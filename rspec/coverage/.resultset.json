@@ -211,6 +211,11 @@
         1,
         7,
         null,
+        7,
+        7,
+        11,
+        null,
+        null,
         null
       ],
       "/Users/inceptor/Projects/wdi/testing-wdi/rspec/app/models/fruit.rb": [
@@ -426,6 +431,6 @@
         null
       ]
     },
-    "timestamp": 1375244014
+    "timestamp": 1375245197
   }
 }
