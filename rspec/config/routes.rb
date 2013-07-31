@@ -1,3 +1,3 @@
 Rspec::Application.routes.draw do
-  resources :fruits , :only => [:index]
+  resources :fruits , :only => [:index, :create]
 end
