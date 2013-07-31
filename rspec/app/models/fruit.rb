@@ -24,6 +24,6 @@ class Fruit < ActiveRecord::Base
   end
 
   def deliciousness
-    0.4
+    0.9
   end
 end
