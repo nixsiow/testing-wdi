@@ -37,6 +37,21 @@ describe FruitsController do
         expect(response).to be_success
         expect(response.status).to eq(200)
       end
+
+      it "should give content type JSON" do
+        expect(response.content_type).to eq('application/json')
+      end
+
+      it "should parse as JSON" do
+        lambda { JSON.parse(response.body) }.should_not raise_error
+      end
+
+      it "should put the name of the fruit in the JSON" do
+        fruits = JSON.parse(response.body)
+        expect(fruits.length).to eq(3)
+        expect(fruits.first["name"]).to eq("Fruit number 2")
+      end
     end
   end
+
 end
