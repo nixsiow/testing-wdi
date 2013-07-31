@@ -61,6 +61,8 @@ describe FruitsController do
       end
 
       it "should redirect to the show action" do
+        expect(response.status).to eq(302)
+        expect(response).to(redirect_to(fruit_path(assigns(:fruit))))
       end
 
       it "should render the show template" do
