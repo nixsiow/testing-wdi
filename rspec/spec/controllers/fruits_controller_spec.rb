@@ -54,4 +54,36 @@ describe FruitsController do
     end
   end
 
+  describe 'POST to create' do
+    describe 'a fruit with valid information' do
+      before do
+        post :create, { :name => "Strawberry" }
+      end
+
+      it "should redirect to the show action" do
+      end
+
+      it "should render the show template" do
+      end
+
+      it "should increase the number of Fruits" do
+      end
+    end
+
+    describe 'a fruit without a name' do
+      before do
+        post :create, {}
+      end
+
+      it 'should give us a 200 success' do
+      end
+
+      it 'should render the new template' do
+      end
+
+      it 'should not increase the number of Fruits' do
+      end
+    end
+  end
+
 end
