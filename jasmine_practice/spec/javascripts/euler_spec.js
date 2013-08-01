@@ -25,19 +25,3 @@ describe("The third Project Euler problem", function () {
     });
   });
 });
-
-describe("Prime tester", function () {
-  describe("returns true for prime numbers", function () {
-    it("should return true for 23", function () {
-      var result = is_prime(23);
-      expect(result).toBe(true);
-    });
-  });
-
-  describe("returns false for composite numbers", function () {
-    it("should return false for 222", function () {
-      var result = is_prime(222);
-      expect(result).toBe(false);
-    });
-  });
-});

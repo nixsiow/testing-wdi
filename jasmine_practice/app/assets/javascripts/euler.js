@@ -15,28 +15,17 @@ function getMulThreeFive(upto) {
 
 }
 
-function largestPrimeFactor(n) {
+// Recursive solution == we also use this function to test for primes with
+// largestPrimeFactor === 1
+function largestPrimeFactor(x) {
+  // Optimisation: the largest prime factor of x < Math.sqrt(x)
+  var max = Math.ceil(Math.sqrt(x));
 
-  for (var i = Math.ceil(n / 2); i > 1; i--) {
-    if ((n % i === 0) && is_prime(i)) {
+  // Search backwards. First prime factor we find is the 'highest'.
+  for (var i = max; i > 1; i--) {
+    if (x % i === 0 && largestPrimeFactor(i) === 1)
       return i;
-    }
   }
 
-  return n;
+  return 1;
 }
-
-// Returns true if x is prime, false otherwise.
-function is_prime (x) {
-  var prime = true; // Assume x is prime.
-
-  // Search numbers from 2 to x/2.
-  for (var i = 2; i < x/2; i++) {
-    if (x % i === 0) {
-      prime = false; // Factor found.
-      break; // Abort.
-    }
-  }
-  return prime; // Return status.
-}
-
