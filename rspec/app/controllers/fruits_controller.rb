@@ -12,10 +12,14 @@ class FruitsController < ApplicationController
     @fruit = Fruit.find(params[:id])
   end
 
+  def new
+   @fruit = Fruit.new
+  end
+
   def create
-    @fruit = Fruit.create(:name => params[:name])
-    if (@fruit.valid?)
-      redirect_to fruits_path @fruit
+    @fruit = Fruit.new(:name => params[:name])
+    if @fruit.save
+      redirect_to @fruit
     else
       render :new
     end

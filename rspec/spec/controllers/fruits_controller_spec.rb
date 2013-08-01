@@ -62,6 +62,14 @@ describe FruitsController do
       get :show, {:id => @fruit.id}
       expect(response).to render_template("show")
     end
+
+    it "should assign a fruit instance variable" do
+      pending
+    end
+
+    it "should mention the fruit on the page" do
+      pending
+    end
   end
 
   describe 'POST to create' do
@@ -72,7 +80,7 @@ describe FruitsController do
 
       it "should redirect to the show action" do
         expect(response.status).to eq(302)
-        expect(response).to(redirect_to(fruits_path(assigns(:fruit))))
+        expect(response).to(redirect_to(fruit_path(assigns(:fruit))))
       end
 
       # This is tested in the 'GET to show' scenario above.

@@ -14,7 +14,7 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-07-31T16:16:40+10:00">2013-07-31T16:16:40+10:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-08-01T09:31:33+10:00">2013-08-01T09:31:33+10:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -63,7 +63,7 @@
       <tr>
         <td class="strong"><a href="#f312b263ac27dbe946d6f5ea22bbbeeb140c4b73" class="src_link" title="app/controllers/fruits_controller.rb">app/controllers/fruits_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>23</td>
+        <td>27</td>
         <td>13</td>
         <td>13</td>
         <td>0</td>
@@ -420,55 +420,79 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">  #def new</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">  #  @fruit = Fruit.new</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">  #end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="16">
+        <li class="covered" data-hits="5" data-linenumber="20">
           <span class="hits">5</span>
           
-          <code class="ruby">    @fruit = Fruit.create(:name =&gt; params[:name])</code>
+          <code class="ruby">    @fruit = Fruit.new(:name =&gt; params[:name])</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="17">
+        <li class="covered" data-hits="5" data-linenumber="21">
           <span class="hits">5</span>
           
-          <code class="ruby">    if (@fruit.valid?)</code>
+          <code class="ruby">    if @fruit.save</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="18">
+        <li class="covered" data-hits="2" data-linenumber="22">
           <span class="hits">2</span>
           
-          <code class="ruby">      redirect_to fruits_path @fruit</code>
+          <code class="ruby">      redirect_to @fruit</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="20">
+        <li class="covered" data-hits="3" data-linenumber="24">
           <span class="hits">3</span>
           
           <code class="ruby">      render :new</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">end</code>
@@ -2289,7 +2313,7 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  resources :fruits , :only =&gt; [:index, :create, :show]</code>
+          <code class="ruby">  resources :fruits , :only =&gt; [:index, :create, :show, :new]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
