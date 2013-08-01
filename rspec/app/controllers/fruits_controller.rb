@@ -14,8 +14,8 @@ class FruitsController < ApplicationController
 
   def create
     @fruit = Fruit.create(:name => params[:name])
-    if (@fruit)
-      redirect_to fruits_path(@fruit)
+    if (@fruit.valid?)
+      redirect_to fruits_path @fruit
     else
       render :new
     end

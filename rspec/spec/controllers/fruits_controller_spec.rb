@@ -75,11 +75,13 @@ describe FruitsController do
         expect(response).to(redirect_to(fruits_path(assigns(:fruit))))
       end
 
+      # This is tested in the 'GET to show' scenario above.
       # it "should render the show template" do
       #   expect(response).to render_template("show")
       # end
 
       it "should increase the number of Fruits" do
+        expect(Fruit.count).to eq(1)
       end
     end
 
@@ -89,12 +91,15 @@ describe FruitsController do
       end
 
       it 'should give us a 200 success' do
+        expect(response.status).to eq(200)
       end
 
       it 'should render the new template' do
+        expect(response).to render_template("new")
       end
 
       it 'should not increase the number of Fruits' do
+        expect(Fruit.count).to eq(0)
       end
     end
   end
