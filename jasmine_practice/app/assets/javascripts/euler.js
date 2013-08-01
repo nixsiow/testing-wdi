@@ -16,14 +16,14 @@ function getMulThreeFive(upto) {
 }
 
 function largestPrimeFactor(n) {
-  var factors = [];
 
-  // Find prime factors of n
+  for (var i = Math.ceil(n / 2); i > 1; i--) {
+    if ((n % i === 0) && is_prime(i)) {
+      return i;
+    }
+  }
 
-  // Return largest prime factor.
-
-  return result;
-
+  return n;
 }
 
 // Returns true if x is prime, false otherwise.
