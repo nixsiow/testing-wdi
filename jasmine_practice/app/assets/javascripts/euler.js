@@ -24,7 +24,19 @@ function largestPrimeFactor(n) {
 
   return result;
 
-  var is_prime = function (x) {
-    // return true if x is prime.
-  }
 }
+
+// Returns true if x is prime, false otherwise.
+function is_prime (x) {
+  var prime = true; // Assume x is prime.
+
+  // Search numbers from 2 to x/2.
+  for (var i = 2; i < x/2; i++) {
+    if (x % i === 0) {
+      prime = false; // Factor found.
+      break; // Abort.
+    }
+  }
+  return prime; // Return status.
+}
+
