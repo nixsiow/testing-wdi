@@ -11,3 +11,17 @@ describe("The first Project Euler problem", function () {
     });
   });
 });
+
+describe("The third Project Euler problem", function () {
+  describe("largest prime factor of 600851475143", function () {
+    var result;
+
+    beforeEach(function () {
+      result = largestPrimeFactor(600851475143);
+    });
+
+    it("should find the largest prime factor", function () {
+      expect(result).toBe(6857);
+    });
+  });
+});
